@@ -12,7 +12,7 @@ function! cl#compile(clparam)
     if exists('g:cl#errorformat')
       let &efm=g:cl#errorformat
     else
-      let &efm='%f(%l): %trror %m,%f(%l): $tarning %m,%f(%l): %*[a-z]: %m,%f(%l): %m'
+      let &efm='%f(%l): %trror %m,%f(%l): $tarning %m,%f(%l): %*[a-z]: %m,%f(%l): %m,%f: fatal %trror %m'
     endif
     if exists('g:cl#encoding')
       let last_menc=&menc
