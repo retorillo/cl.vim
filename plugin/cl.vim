@@ -1,10 +1,10 @@
 command!
   \ -nargs=*
   \ -complete=file
-  \ ClCompile
-  \ call cl#compile('<args>')
+  \ CL
+  \ call cl#exec('<args>')
 
-function! cl#compile(clparam)
+function! cl#exec(clparam)
   let last_mp=&mp
   let &mp='cl'
   let last_efm=&efm
