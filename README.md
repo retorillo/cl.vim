@@ -1,6 +1,6 @@
 # cl.vim
 
-ClCommand helps to execute Microsoft C/C++ compiler `CL` and to store its
+`ClCommand` helps to execute Microsoft C/C++ compiler `CL` and to store its
 results into quickfix.
 
 ## Prerequiresite
@@ -14,6 +14,12 @@ results into quickfix.
 
 ```
 git clone https://github.com/retorillo/cl.vim.git ~/.vim/bundle/cl.vim
+```
+
+## Usage
+
+```
+:ClCompile /EHsc % | clist
 ```
 
 ## Localization
