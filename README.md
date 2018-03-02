@@ -5,33 +5,40 @@ quickfix.
 
 ## Prerequiresite
 
-- Vim.7x (To use `g:cl#encoding`, must be Vim 8.0.0420 or later)
+- Vim.7x
 - Visual Studio (Tested with 2017 Community)
   - Vim must be executed on Command Prompt pre-configured by `vcvarsall`
-    - Use Developer Command Prompt or consider [vcinit](https://github.com/retorillo/vcinit).
+    - Use Developer Command Prompt, or consider [vcinit](https://github.com/retorillo/vcinit).
+- (Optional) [7zip](https://chocolatey.org/packages/7zip)
+  - Automatically compute hash for compiler artifacts when `7z` command is available.
+  - To change hash function, set `g:cl#hash` (default: `sha1`)
 
 ## Installation (Pathogen)
 
-```
-git clone https://github.com/retorillo/cl.vim.git ~/.vim/bundle/cl.vim
+```batchfile
+git clone https://github.com/retorillo/cl.vim.git %userprofile%/vimfiles/bundle/cl.vim
 ```
 
 ## Usage
 
+```vimscript
+:CL /EHsc %
 ```
-:CL /EHsc % | clist
-```
+
+- When compiling failed, `:cn` command can takes you to error line.
+- You can use `:clist` to list errors. And, of course, `:clist!` (with bang)
+  allows to show all stdout/stderr lines.
+- The original `CL` syntax may be able to used in almost cases. (`:CL /?` can
+  dumps help message)
 
 ## Localization
 
 If garbled, set `cl#encoding` on your vimrc as below:
 
-```viml
+```vimscript
 " For Shift-JIS environment
-let g:cl#encoding=sjis
+let g:cl#encoding='sjis'
 ```
-
-**NOTE:** To use this feature, Vim must be Ver.8.0.0420 or later.
 
 ## License
 
