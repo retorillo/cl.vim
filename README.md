@@ -15,13 +15,13 @@ quickfix.
 
 ## Installation (Pathogen)
 
-```batchfile
+```batch
 git clone https://github.com/retorillo/cl.vim.git %userprofile%/vimfiles/bundle/cl.vim
 ```
 
 ## Usage
 
-```vimscript
+```viml
 :CL /EHsc %
 ```
 
@@ -35,7 +35,7 @@ git clone https://github.com/retorillo/cl.vim.git %userprofile%/vimfiles/bundle/
 
 If garbled, set `cl#encoding` on your vimrc as below:
 
-```vimscript
+```viml
 " For Shift-JIS environment
 let g:cl#encoding='sjis'
 ```
